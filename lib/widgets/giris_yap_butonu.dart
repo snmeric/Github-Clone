@@ -34,11 +34,12 @@ class _GirisYapButtonState extends State<GirisYapButton> {
               try {
                 await firebaseService.gitHubSignIn(context);
                 c.login();
-               
               } on FirebaseAuthException catch (e) {
                 print("HATA!!: ${e.message}");
                 Get.toNamed('LOGIN');
-                Grock.snackBar(title: 'Hata', description: "Giriş yaparken bir sorun oluştu.");
+                Grock.snackBar(
+                    title: 'Hata',
+                    description: "Giriş yaparken bir sorun oluştu.");
               }
               setState(() {
                 isLoading = false;
@@ -71,9 +72,15 @@ class _GirisYapButtonState extends State<GirisYapButton> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(
-                  child: Image.asset('assets/images/github_logo.png',width: 30,color: Colors.white,),
+                  child: Image.asset(
+                    'assets/images/github_logo.png',
+                    width: 30,
+                    color: Colors.white,
+                  ),
                 ),
-                SizedBox(width: 10,),
+                SizedBox(
+                  width: 10,
+                ),
                 Center(
                   child: Text(
                     'Github ile giriş yap',
