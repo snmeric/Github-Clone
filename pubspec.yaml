@@ -50,6 +50,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   drop_shadow: ^0.0.1+4
   animated_text_kit: ^4.2.2
+  auto_size_text: ^3.0.0
+  animations: ^2.0.3
+  auto_size_text_field: ^2.1.0
+  animated_custom_dropdown: ^1.2.2
   
   
 

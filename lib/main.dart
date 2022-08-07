@@ -12,7 +12,6 @@ void main() async {
   await Firebase.initializeApp();
   await GetStorage.init();  
   runApp(MyApp());
-  
 }
 // Future init()async{
 //   WidgetsFlutterBinding.ensureInitialized();

@@ -16,16 +16,21 @@ class AppPages {
     GetPage(
       name: _Paths.HOME,
       page: () => HomePage(),
+    
       binding: HomeBinding(),
     ),
     GetPage(
       name: _Paths.LOGIN,
       page: () => LoginPage(),
+      transition: Transition.fade,
+      transitionDuration: Duration(seconds: 1),
       binding: LoginBinding(),
     ),
     GetPage(
       name: _Paths.SPLASH,
       page: () => SplashPage(),
+      transition: Transition.fade,
+      transitionDuration: Duration(seconds: 2),
       binding: SplashBinding(),
     ),
   ];

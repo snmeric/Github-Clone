@@ -31,33 +31,29 @@ class _LoginPageState extends State<LoginPage> {
 
     return Scaffold(
             backgroundColor: bgColor,
-            body: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Center(
-                  child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: 120,
-                        ),
-                        Image.asset(
-                          'assets/images/github_logo.png',
-                          color: Colors.white,
-                          height: 160,
-                        ),
-                       
-                        
-                        SizedBox(
-                          height: 20,
-                        ),
-                        SizedBox(
-                          width: 330,
-                          child: GirisYapButton(),
-                        )
-                      ]),
-                ),
+            body: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                   
+                      Image.asset(
+                        'assets/images/github_logo.png',
+                        color: Colors.white,
+                        height: 160,
+                      ),
+                     
+                      
+                      SizedBox(
+                        height: 20,
+                      ),
+                      SizedBox(
+                        width: 330,
+                        child: GirisYapButton(),
+                      )
+                    ]),
               ),
             ),
           );

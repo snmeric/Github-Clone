@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_projeleri/controllers/user_control.dart';
 import 'package:flutter_projeleri/firebase_auth/secret_keys.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -16,6 +17,7 @@ class FirebaseService {
 
   Future<UserCredential> gitHubSignIn(context) async {
     final GitHubSignIn github = GitHubSignIn(
+     scope: "user,gist,admin:repo_hook,repo,admin:enterprise",
         clientId: clientId,
         clientSecret: clientSecret,
         redirectUrl: redirectUrl);
