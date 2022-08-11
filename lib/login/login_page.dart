@@ -6,6 +6,7 @@ import 'package:flutter_projeleri/login/github_signin.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:github_sign_in/github_sign_in.dart';
 import 'package:grock/grock.dart';
+import 'package:rive/rive.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_projeleri/const.dart';
@@ -29,34 +30,40 @@ class _LoginPageState extends State<LoginPage> {
     bool isLoading = false;
     final box = GetStorage();
 
-    return Scaffold(
-            backgroundColor: bgColor,
-            body: Padding(
+
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: bgColor,
+        body: Stack(
+          children: [
+            const RiveAnimation.asset(
+              'assets/rive/space_coffee.riv',
+              fit: BoxFit.cover,
+            ),
+            Padding(
               padding: const EdgeInsets.all(20.0),
               child: Center(
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                   
-                      Image.asset(
-                        'assets/images/github_logo.png',
-                        color: Colors.white,
-                        height: 160,
-                      ),
-                     
-                      
-                      SizedBox(
-                        height: 20,
-                      ),
+                      // Image.asset(
+                      //   'assets/images/github_logo.png',
+                      //   color: Colors.white,
+                      //   height: 160,
+                      // ),
+
                       SizedBox(
                         width: 330,
                         child: GirisYapButton(),
-                      )
+                      ),
                     ]),
               ),
             ),
-          );
+          ],
+        ),
+      ),
+    );
   }
 }
 

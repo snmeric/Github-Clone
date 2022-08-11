@@ -35,11 +35,12 @@ class _GirisYapButtonState extends State<GirisYapButton> {
                 await firebaseService.gitHubSignIn(context);
                 c.login();
               } on FirebaseAuthException catch (e) {
-                print("HATA!!: ${e.message}");
-                Get.toNamed('LOGIN');
+                //print("HATA!!: ${e.message}");
+                
                 Grock.snackBar(
                     title: 'Hata',
                     description: "Giriş yaparken bir sorun oluştu.");
+              
               }
               setState(() {
                 isLoading = false;

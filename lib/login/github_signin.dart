@@ -15,18 +15,25 @@ class FirebaseService {
   String redirectUrl =
       "https://issuepost-35f3d.firebaseapp.com/__/auth/handler";
 
-  Future<UserCredential> gitHubSignIn(context) async {
+  Future<UserCredential?> gitHubSignIn(context) async {
     final GitHubSignIn github = GitHubSignIn(
-     scope: "user,gist,admin:repo_hook,repo,admin:enterprise",
+        scope: "user,gist,admin:repo_hook,repo,admin:enterprise",
         clientId: clientId,
         clientSecret: clientSecret,
-        redirectUrl: redirectUrl);
+        redirectUrl: redirectUrl,
+        title: 'Github ile giriş yap',centerTitle: true);
 
     final result = await github.signIn(context);
     final githubCreden = GithubAuthProvider.credential(result.token!);
     box.write('token', result.token);
     log("Kaydedilen Token: ${box.read('token')}");
-    //result.status == GitHubSignInResultStatus.ok;
-    return await FirebaseAuth.instance.signInWithCredential(githubCreden);
+
+    if (result.status == GitHubSignInResultStatus.ok) {
+      return await FirebaseAuth.instance.signInWithCredential(githubCreden);
+    } else if(result.status == GitHubSignInResultStatus.failed){
+      Grock.snackBar(title: 'Başarısız', description: 'Giriş Başarısız!');
+      
+      return null;
+    }
   }
 }
