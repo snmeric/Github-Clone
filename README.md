@@ -1,16 +1,3 @@
-# flutter_projeleri
+# Github-Issue-Kontrol
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Group 3](https://user-images.githubusercontent.com/82456006/184483189-73f2a7eb-6d44-4357-83a1-f2f19fa17934.png)
