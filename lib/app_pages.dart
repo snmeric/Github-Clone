@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter_projeleri/home/home.dart';
 import 'package:flutter_projeleri/home/home_binding.dart';
 import 'package:flutter_projeleri/login/login_binding.dart';
@@ -15,22 +16,22 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => HomePage(),
+      page: () => const HomePage(),
     
       binding: HomeBinding(),
     ),
     GetPage(
       name: _Paths.LOGIN,
-      page: () => LoginPage(),
+      page: () => const LoginPage(),
       transition: Transition.fade,
-      transitionDuration: Duration(seconds: 1),
+      transitionDuration: const Duration(seconds: 1),
       binding: LoginBinding(),
     ),
     GetPage(
       name: _Paths.SPLASH,
-      page: () => SplashPage(),
+      page: () => const SplashPage(),
       transition: Transition.fade,
-      transitionDuration: Duration(seconds: 2),
+      transitionDuration: const Duration(seconds: 2),
       binding: SplashBinding(),
     ),
   ];

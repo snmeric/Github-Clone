@@ -47,7 +47,7 @@ class IssueService {
         // Grock.snackBar(
         //     title: "Başarılı",
         //     description: "Başarılı bir şekilde issue oluşturuldu.");
-        Get.to(() => HomePage(), transition: Transition.fade);
+        Get.to(() => const HomePage(), transition: Transition.fade);
         CreateIssueModel issueListModel =
             CreateIssueModel.fromJson(responseString as Map<String, dynamic>);
         return issueListModel;

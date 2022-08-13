@@ -1,7 +1,5 @@
 import 'package:flutter_projeleri/model/get_repo_model.dart';
-import 'package:flutter_projeleri/model/get_user.dart';
 import 'package:flutter_projeleri/services/repo_service.dart';
-import 'package:flutter_projeleri/services/service.dart';
 import 'package:get/get.dart';
 
 class RepoController extends GetxController {

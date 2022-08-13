@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 import 'package:flutter_projeleri/const.dart';
 import 'package:flutter_projeleri/controllers/issue_list_controller.dart';
@@ -51,42 +53,45 @@ class IssueListView extends StatelessWidget {
                   itemCount: c.issueListGet.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
-                        margin: EdgeInsets.all(10),
+                        margin: const EdgeInsets.all(10),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
                                 width: width * 0.8,
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 38, 48, 66),
-                                  borderRadius: BorderRadius.only(
+                                  color: const Color.fromARGB(255, 38, 48, 66),
+                                  borderRadius: const BorderRadius.only(
                                       topLeft: Radius.circular(15),
                                       topRight: Radius.circular(15)),
                                   border: Border.all(
-                                    color: Color.fromARGB(255, 99, 132, 194),
+                                    color: const Color.fromARGB(255, 99, 132, 194),
                                     width: 1.0,
                                   ),
                                 ),
                                 child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(
-                                      'Başlık: ',
-                                      style: regular16WhiteBoldText,
-                                    ),
+                                    // Text(
+                                    //   'Başlık: ',
+                                    //   style: regular16WhiteBoldText,
+                                    // ),
                                     Text(
                                       '${c.issueListGet.value[index].title}',
                                       style: regular15WhiteText,
                                     ),
-                                   
+
                                     Text(
-                                        'Yorum Sayısı: ${c.issueListGet.value[index].comments}',style: regular13GreyText,)
+                                      'Yorum Sayısı: ${c.issueListGet.value[index].comments}',
+                                      style: regular13GreyText,
+                                    )
                                   ],
                                 )),
                             Container(
                                 width: width * 0.8,
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 decoration: BoxDecoration(
                                   // gradient: LinearGradient(
                                   //   colors: [
@@ -95,11 +100,11 @@ class IssueListView extends StatelessWidget {
                                   //   ],
                                   // ),
                                   border: Border.all(
-                                    color: Color.fromARGB(255, 99, 132, 194),
+                                    color: const Color.fromARGB(255, 99, 132, 194),
                                     width: 1.0,
                                   ),
                                   color: bgSecondaryColor,
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(15),
                                       bottomRight: Radius.circular(15)),
                                 ),
@@ -244,7 +249,7 @@ class Avatar extends StatelessWidget {
   final double size;
   final image;
   final EdgeInsets margin;
-  Avatar({this.image, this.size = 50, this.margin = const EdgeInsets.all(0)});
+  const Avatar({this.image, this.size = 50, this.margin = const EdgeInsets.all(0)});
   @override
   Widget build(BuildContext context) {
     return Padding(

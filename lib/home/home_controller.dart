@@ -14,6 +14,7 @@ class HomeController extends GetxController {
     name = box.read("name");
   }
 
+
   void onReady() {
     super.onReady();
   }

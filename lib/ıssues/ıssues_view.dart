@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:animated_custom_dropdown/custom_dropdown.dart';
 import 'package:auto_size_text_field/auto_size_text_field.dart';
 import 'package:chips_choice_null_safety/chips_choice_null_safety.dart';
@@ -87,6 +89,7 @@ class _IssuesPageState extends State<IssuesPage> {
                             controller: _titleControl,
                             style: regular15WhiteText,
                             maxLines: 1,
+                            maxLength: 10,
                             textInputAction: TextInputAction.next,
                             decoration: InputDecoration(
                                 filled: true, //<-- SEE HERE
@@ -128,12 +131,12 @@ class _IssuesPageState extends State<IssuesPage> {
                                 hintStyle: regular15GreyText,
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                     color: Colors.transparent,
                                   ),
                                 ),
                                 focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
+                                  borderSide: const BorderSide(
                                       color: Colors.transparent, width: 1.5),
                                   borderRadius: BorderRadius.circular(10),
                                 ),
@@ -246,7 +249,9 @@ class _IssuesPageState extends State<IssuesPage> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 30,)
+                        const SizedBox(
+                          height: 30,
+                        )
                       ],
                     ),
                   ),
@@ -264,7 +269,7 @@ class Content extends StatefulWidget {
   final String? title;
   final Widget? child;
 
-  Content({
+  const Content({
     Key? key,
     required this.title,
     required this.child,

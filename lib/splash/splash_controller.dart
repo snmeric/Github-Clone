@@ -14,7 +14,7 @@ class SplashController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    Future.delayed(const Duration(milliseconds: 2000), () {
+    Future.delayed(const Duration(milliseconds: 1000), () {
       if (getStorge.read('token') != null) {
         Get.offAllNamed(Routes.HOME);
       } else {

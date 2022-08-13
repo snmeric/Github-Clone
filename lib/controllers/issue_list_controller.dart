@@ -1,10 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_projeleri/model/get_list_issue.dart';
-import 'package:flutter_projeleri/model/get_repo_model.dart';
-import 'package:flutter_projeleri/model/get_user.dart';
 import 'package:flutter_projeleri/services/issue_list_service.dart';
-import 'package:flutter_projeleri/services/repo_service.dart';
-import 'package:flutter_projeleri/services/service.dart';
 import 'package:get/get.dart';
 
 class IssueListController extends GetxController {

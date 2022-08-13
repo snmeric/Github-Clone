@@ -32,15 +32,16 @@ class _GirisYapButtonState extends State<GirisYapButton> {
               FirebaseService firebaseService = FirebaseService();
 
               try {
-                await firebaseService.gitHubSignIn(context);
-                c.login();
+                var sonuc = await firebaseService.gitHubSignIn(context);
+                if (sonuc != null) {
+                  c.login();
+                }
               } on FirebaseAuthException catch (e) {
-                //print("HATA!!: ${e.message}");
-                
+                print("HATA!!: ${e.message}");
+
                 Grock.snackBar(
                     title: 'Hata',
                     description: "Giriş yaparken bir sorun oluştu.");
-              
               }
               setState(() {
                 isLoading = false;
@@ -59,7 +60,7 @@ class _GirisYapButtonState extends State<GirisYapButton> {
             //     LoginPage();
             //   }
 
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             style: NeumorphicStyle(
               color: myPrimaryColor,
               shadowDarkColor: myPrimaryColor,
@@ -79,7 +80,7 @@ class _GirisYapButtonState extends State<GirisYapButton> {
                     color: Colors.white,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Center(

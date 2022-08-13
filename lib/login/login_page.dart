@@ -1,19 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_projeleri/firebase_auth/secret_keys.dart' as SecretKey;
-import 'package:flutter_projeleri/login/github_signin.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:github_sign_in/github_sign_in.dart';
-import 'package:grock/grock.dart';
 import 'package:rive/rive.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_projeleri/const.dart';
 import 'package:flutter_projeleri/widgets/giris_yap_butonu.dart';
-import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
-import 'login_controller.dart';
+
 
 class LoginPage extends StatefulWidget {
   const LoginPage({
@@ -46,14 +37,14 @@ class _LoginPageState extends State<LoginPage> {
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
+                    children:const [
                       // Image.asset(
                       //   'assets/images/github_logo.png',
                       //   color: Colors.white,
                       //   height: 160,
                       // ),
 
-                      SizedBox(
+                       SizedBox(
                         width: 330,
                         child: GirisYapButton(),
                       ),

@@ -11,7 +11,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await GetStorage.init();  
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 // Future init()async{
 //   WidgetsFlutterBinding.ensureInitialized();
